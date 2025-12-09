@@ -1,0 +1,372 @@
+/* --- VARIABLES & RESET --- */
+:root {
+    --bg-dark: #0b0c10;
+    --bg-light: #1f2833;
+    --text-main: #c5c6c7;
+    --accent: #66fcf1; /* Cyan Neón */
+    --accent-dark: #45a29e;
+    --white: #ffffff;
+    --font: 'Montserrat', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: var(--font);
+    overflow-x: hidden; /* Evitar scroll horizontal */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- HEADER & NAV --- */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px 0;
+    z-index: 1000;
+    transition: 0.4s;
+}
+
+/* Clase que JS añade al hacer scroll */
+header.scrolled {
+    background: rgba(11, 12, 16, 0.9); /* Transparente */
+    backdrop-filter: blur(10px); /* Efecto vidrio */
+    box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+    padding: 15px 0;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: var(--white);
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.highlight {
+    color: var(--accent);
+}
+
+.desktop-nav a {
+    color: var(--white);
+    text-decoration: none;
+    margin-left: 30px;
+    font-weight: 500;
+    position: relative;
+    transition: 0.3s;
+}
+
+/* Animación de subrayado en menú */
+.desktop-nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--accent);
+    transition: width 0.3s;
+}
+
+.desktop-nav a:hover::after {
+    width: 100%;
+}
+
+.desktop-nav .btn-glow {
+    border: 2px solid var(--accent);
+    padding: 8px 20px;
+    border-radius: 50px;
+}
+
+.desktop-nav .btn-glow:hover {
+    background: var(--accent);
+    color: var(--bg-dark);
+    box-shadow: 0 0 15px var(--accent); /* Resplandor */
+}
+
+.desktop-nav .btn-glow::after {
+    display: none; /* Quitamos subrayado al botón */
+}
+
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    color: var(--white);
+    cursor: pointer;
+}
+
+/* --- MOBILE MENU OVERLAY --- */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Oculto a la derecha */
+    width: 100%;
+    height: 100vh;
+    background: var(--bg-dark);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    transition: 0.5s ease-in-out;
+}
+
+.mobile-menu.active {
+    right: 0;
+}
+
+.mobile-menu nav a {
+    display: block;
+    font-size: 2rem;
+    color: var(--white);
+    text-decoration: none;
+    margin: 20px 0;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.mobile-menu nav a:hover {
+    color: var(--accent);
+    letter-spacing: 2px;
+}
+
+.close-menu {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    font-size: 3rem;
+    color: var(--accent);
+    cursor: pointer;
+}
+
+/* --- HERO SECTION --- */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    z-index: 2;
+    max-width: 800px;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    color: var(--white);
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    max-width: 600px;
+}
+
+/* Fondo decorativo (Bola de luz) */
+.gradient-bg {
+    position: absolute;
+    top: -20%;
+    right: -10%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(102,252,241,0.15) 0%, rgba(11,12,16,0) 70%);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn.primary {
+    background: var(--accent);
+    color: var(--bg-dark);
+}
+
+.btn.primary:hover {
+    background: var(--accent-dark);
+    box-shadow: 0 0 20px rgba(102, 252, 241, 0.4);
+}
+
+.btn.outline {
+    border: 2px solid var(--white);
+    color: var(--white);
+    margin-left: 15px;
+}
+
+.btn.outline:hover {
+    background: var(--white);
+    color: var(--bg-dark);
+}
+
+/* --- SECCIONES GENERALES --- */
+.section {
+    padding: 100px 0;
+}
+
+.section-header {
+    margin-bottom: 50px;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    color: var(--white);
+}
+
+.line {
+    width: 60px;
+    height: 4px;
+    background: var(--accent);
+    margin-top: 10px;
+}
+
+/* --- SERVICIOS --- */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.service-card {
+    background: var(--bg-light);
+    padding: 40px;
+    border-radius: 10px;
+    transition: 0.3s;
+    border-bottom: 3px solid transparent;
+}
+
+.service-card:hover {
+    transform: translateY(-10px); /* Levantar tarjeta */
+    border-bottom: 3px solid var(--accent);
+}
+
+.icon-box {
+    font-size: 3rem;
+    color: var(--accent);
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    color: var(--white);
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+/* --- PORTFOLIO --- */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.portfolio-item {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 250px;
+    cursor: pointer;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+/* Overlay negro al pasar mouse */
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0; /* Oculto al inicio */
+    background: linear-gradient(transparent, rgba(102, 252, 241, 0.9));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.portfolio-item:hover .overlay {
+    height: 100%; /* Cubre toda la imagen */
+}
+
+.portfolio-item:hover img {
+    transform: scale(1.1);
+}
+
+.overlay h3 {
+    color: var(--bg-dark);
+    font-size: 1.5rem;
+}
+
+/* --- ANIMACIONES DE SCROLL (CLASES UTILITY) --- */
+.hidden {
+    opacity: 0;
+    transform: translateY(50px); /* Empujado hacia abajo */
+    transition: all 1s ease;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Retrasos para efecto escalera */
+.delay-100 { transition-delay: 100ms; }
+.delay-200 { transition-delay: 200ms; }
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+    .desktop-nav {
+        display: none;
+    }
+    
+    .hamburger {
+        display: block;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-btns {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .btn.outline {
+        margin-left: 0;
+    }
+}

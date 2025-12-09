@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeonFlux | Agencia Digital</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header id="header">
+        <div class="container nav-container">
+            <a href="#" class="logo">Neon<span class="highlight">Flux</span>.</a>
+            
+            <nav class="desktop-nav">
+                <a href="#home" class="nav-link active">Inicio</a>
+                <a href="#services" class="nav-link">Servicios</a>
+                <a href="#portfolio" class="nav-link">Proyectos</a>
+                <a href="#contact" class="nav-link btn-glow">Cotizar</a>
+            </nav>
+
+            <div class="hamburger" id="hamburger">
+                <i class='bx bx-menu-alt-right'></i>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-menu" id="mobile-menu">
+        <i class='bx bx-x close-menu' id="close-menu"></i>
+        <nav>
+            <a href="#home">Inicio</a>
+            <a href="#services">Servicios</a>
+            <a href="#portfolio">Proyectos</a>
+            <a href="#contact">Hablemos</a>
+        </nav>
+    </div>
+
+    <section id="home" class="hero">
+        <div class="container hero-content">
+            <h1 class="hidden">Impulsamos tu marca hacia el <span class="typing-text">Futuro</span></h1>
+            <p class="hidden delay-100">Estrategias digitales, diseño web de alto impacto y crecimiento exponencial para negocios modernos.</p>
+            <div class="hero-btns hidden delay-200">
+                <a href="#services" class="btn primary">Nuestros Servicios</a>
+                <a href="#portfolio" class="btn outline">Ver Portafolio</a>
+            </div>
+        </div>
+        <div class="gradient-bg"></div>
+    </section>
+
+    <section id="services" class="section">
+        <div class="container">
+            <div class="section-header hidden">
+                <h2>Lo que hacemos</h2>
+                <div class="line"></div>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card hidden">
+                    <div class="icon-box"><i class='bx bx-code-alt'></i></div>
+                    <h3>Desarrollo Web</h3>
+                    <p>Sitios web ultrarrápidos, responsivos y optimizados para SEO que convierten visitantes en clientes.</p>
+                </div>
+                <div class="service-card hidden delay-100">
+                    <div class="icon-box"><i class='bx bx-target-lock'></i></div>
+                    <h3>Marketing SEO/SEM</h3>
+                    <p>Posicionamos tu marca en el #1 de Google y gestionamos campañas de anuncios de alto retorno.</p>
+                </div>
+                <div class="service-card hidden delay-200">
+                    <div class="icon-box"><i class='bx bx-palette'></i></div>
+                    <h3>Branding & UI/UX</h3>
+                    <p>Diseñamos identidades visuales memorables y experiencias de usuario fluidas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats section">
+        <div class="container stats-grid">
+            <div class="stat-item hidden">
+                <h3>+150</h3>
+                <p>Proyectos Entregados</p>
+            </div>
+            <div class="stat-item hidden">
+                <h3>98%</h3>
+                <p>Clientes Felices</p>
+            </div>
+            <div class="stat-item hidden">
+                <h3>10x</h3>
+                <p>Retorno de Inversión</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="section">
+        <div class="container">
+            <div class="section-header hidden">
+                <h2>Trabajos Recientes</h2>
+                <div class="line"></div>
+            </div>
+            
+            <div class="portfolio-grid">
+                <div class="portfolio-item hidden">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Proyecto 1">
+                    <div class="overlay">
+                        <h3>Tech StartUp</h3>
+                        <p>Branding & Web</p>
+                    </div>
+                </div>
+                <div class="portfolio-item hidden delay-100">
+                    <img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Proyecto 2">
+                    <div class="overlay">
+                        <h3>E-Commerce App</h3>
+                        <p>Desarrollo Móvil</p>
+                    </div>
+                </div>
+                <div class="portfolio-item hidden delay-200">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Proyecto 3">
+                    <div class="overlay">
+                        <h3>Dashboard Financiero</h3>
+                        <p>Diseño UI/UX</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <div class="contact-box hidden">
+                <h2>¿Listo para escalar?</h2>
+                <p>Agenda una consultoría gratuita de 30 minutos.</p>
+                <form>
+                    <input type="email" placeholder="Tu correo electrónico" required>
+                    <button type="submit" class="btn primary">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 NeonFlux Digital. Todos los derechos reservados.</p>
+        <div class="socials">
+            <i class='bx bxl-linkedin'></i>
+            <i class='bx bxl-instagram'></i>
+            <i class='bx bxl-twitter'></i>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
