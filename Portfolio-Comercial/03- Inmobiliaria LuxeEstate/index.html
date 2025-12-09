@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LuxeEstate | Propiedades Exclusivas</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header id="header">
+        <div class="container nav-flex">
+            <a href="#" class="logo">Luxe<span>Estate</span>.</a>
+            
+            <nav id="navbar">
+                <a href="#home" class="active">Inicio</a>
+                <a href="#properties">Propiedades</a>
+                <a href="#agents">Agentes</a>
+                <a href="#blog">Noticias</a>
+                <a href="#contact" class="btn-contact">Contactar</a>
+            </nav>
+
+            <div class="menu-toggle" id="menu-toggle">
+                <i class='bx bx-menu'></i>
+            </div>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <span class="subtitle">Descubre tu próximo hogar</span>
+            <h1>Vive la Exclusividad <br> que mereces</h1>
+            
+            <div class="search-bar">
+                <div class="input-group">
+                    <label>Ubicación</label>
+                    <input type="text" placeholder="Ej: Miami, Madrid...">
+                </div>
+                <div class="input-group">
+                    <label>Tipo</label>
+                    <select>
+                        <option>Cualquiera</option>
+                        <option>Casa</option>
+                        <option>Departamento</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label>Precio Max</label>
+                    <input type="text" placeholder="$1M">
+                </div>
+                <button class="btn-search"><i class='bx bx-search'></i> Buscar</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="properties" class="section container">
+        <div class="section-header">
+            <h2>Propiedades Destacadas</h2>
+            <p>Una selección curada de las residencias más prestigiosas.</p>
+        </div>
+
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">Todas</button>
+            <button class="filter-btn" data-filter="house">Casas</button>
+            <button class="filter-btn" data-filter="apartment">Departamentos</button>
+            <button class="filter-btn" data-filter="villa">Villas</button>
+        </div>
+
+        <div class="property-grid">
+            
+            <div class="property-card" data-category="villa">
+                <div class="card-img">
+                    <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Villa Moderna">
+                    <span class="tag">En Venta</span>
+                    <div class="price-tag">$2,500,000</div>
+                </div>
+                <div class="card-info">
+                    <h3>Villa Ocean View</h3>
+                    <p class="location"><i class='bx bx-map'></i> Beverly Hills, CA</p>
+                    <div class="details">
+                        <span><i class='bx bx-bed'></i> 5 Hab</span>
+                        <span><i class='bx bx-bath'></i> 4 Baños</span>
+                        <span><i class='bx bx-area'></i> 450 m²</span>
+                    </div>
+                    <div class="card-footer">
+                        <div class="agent">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Agente">
+                            <span>Carlos R.</span>
+                        </div>
+                        <button class="btn-view">Ver Detalles</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="property-card" data-category="apartment">
+                <div class="card-img">
+                    <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Penthouse">
+                    <span class="tag for-rent">En Renta</span>
+                    <div class="price-tag">$4,500 / mes</div>
+                </div>
+                <div class="card-info">
+                    <h3>Skyline Penthouse</h3>
+                    <p class="location"><i class='bx bx-map'></i> Manhattan, NY</p>
+                    <div class="details">
+                        <span><i class='bx bx-bed'></i> 2 Hab</span>
+                        <span><i class='bx bx-bath'></i> 2 Baños</span>
+                        <span><i class='bx bx-area'></i> 120 m²</span>
+                    </div>
+                    <div class="card-footer">
+                        <div class="agent">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Agente">
+                            <span>Ana M.</span>
+                        </div>
+                        <button class="btn-view">Ver Detalles</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="property-card" data-category="house">
+                <div class="card-img">
+                    <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Casa Familiar">
+                    <span class="tag">En Venta</span>
+                    <div class="price-tag">$850,000</div>
+                </div>
+                <div class="card-info">
+                    <h3>Residencia Los Pinos</h3>
+                    <p class="location"><i class='bx bx-map'></i> Madrid, ES</p>
+                    <div class="details">
+                        <span><i class='bx bx-bed'></i> 4 Hab</span>
+                        <span><i class='bx bx-bath'></i> 3 Baños</span>
+                        <span><i class='bx bx-area'></i> 280 m²</span>
+                    </div>
+                    <div class="card-footer">
+                        <div class="agent">
+                            <img src="https://randomuser.me/api/portraits/men/85.jpg" alt="Agente">
+                            <span>David L.</span>
+                        </div>
+                        <button class="btn-view">Ver Detalles</button>
+                    </div>
+                </div>
+            </div>
+
+             <div class="property-card" data-category="villa">
+                <div class="card-img">
+                    <img src="https://images.unsplash.com/photo-1600596542815-2a4d04774c13?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Villa Bosque">
+                    <span class="tag">En Venta</span>
+                    <div class="price-tag">$3,200,000</div>
+                </div>
+                <div class="card-info">
+                    <h3>The Forest Retreat</h3>
+                    <p class="location"><i class='bx bx-map'></i> Aspen, CO</p>
+                    <div class="details">
+                        <span><i class='bx bx-bed'></i> 6 Hab</span>
+                        <span><i class='bx bx-bath'></i> 5 Baños</span>
+                        <span><i class='bx bx-area'></i> 600 m²</span>
+                    </div>
+                    <div class="card-footer">
+                        <div class="agent">
+                            <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Agente">
+                            <span>Sarah J.</span>
+                        </div>
+                        <button class="btn-view">Ver Detalles</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-box">
+                <a href="#" class="logo">Luxe<span>Estate</span>.</a>
+                <p>Redefiniendo el estándar de la vida de lujo desde 1995.</p>
+            </div>
+            <div class="footer-box">
+                <h3>Enlaces</h3>
+                <ul>
+                    <li>Inicio</li>
+                    <li>Propiedades</li>
+                    <li>Agentes</li>
+                </ul>
+            </div>
+            <div class="footer-box">
+                <h3>Contacto</h3>
+                <p>info@luxeestate.com</p>
+                <p>+1 234 567 890</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 LuxeEstate Inc.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
