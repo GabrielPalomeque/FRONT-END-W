@@ -1,0 +1,108 @@
+/* --- ESTILOS GENERALES --- */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f1f5f8;
+}
+
+nav {
+    background: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 1.5rem;
+    color: #102a42;
+    margin: 0;
+}
+
+.highlight {
+    color: #49a6e9;
+}
+
+.nav-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.nav-toggle {
+    font-size: 1.5rem;
+    color: #49a6e9;
+    background: transparent;
+    border-color: transparent;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.nav-toggle:hover {
+    color: #102a42;
+    transform: rotate(90deg); /* Pequeña animación al tocar */
+}
+
+/* --- MENÚ OCULTO (MÓVIL) --- */
+.links {
+    height: 0; /* OCULTO POR DEFECTO */
+    overflow: hidden;
+    transition: all 0.3s linear; /* Animación suave al abrir */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Esta es la clase que JS pondrá y quitará */
+.show-links {
+    height: 200px; /* Altura suficiente para mostrar los enlaces */
+}
+
+.links a {
+    display: block;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    color: #324d67;
+    font-size: 1.1rem;
+    transition: 0.3s;
+}
+
+.links a:hover {
+    background: #e0eefc;
+    color: #49a6e9;
+    padding-left: 1.5rem; /* Efecto de desplazamiento */
+}
+
+/* --- PANTALLAS GRANDES (DESKTOP) --- */
+@media screen and (min-width: 800px) {
+    .nav-center {
+        max-width: 1170px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem;
+    }
+
+    .nav-header {
+        padding: 0;
+    }
+
+    .nav-toggle {
+        display: none; /* Ocultamos el botón hamburguesa */
+    }
+
+    .links {
+        height: auto; /* Siempre visible */
+        display: flex; /* En fila horizontal */
+        margin-right: 2rem;
+    }
+
+    .links a {
+        padding: 0;
+        margin: 0 1rem;
+    }
+    
+    .links a:hover {
+        padding: 0;
+        background: transparent;
+    }
+}
