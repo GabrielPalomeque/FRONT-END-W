@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IronForged | Fitness & Performance</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+    <header class="header">
+        <a href="#" class="logo">IRON<span>FORGED</span></a>
+        <nav class="navbar">
+            <a href="#home">Inicio</a>
+            <a href="#programas">Programas</a>
+            <a href="#transformaciones">Resultados</a>
+            <a href="#bmi">Calculadora</a>
+            <a href="#pricing">Planes</a>
+        </nav>
+        <a href="#contact" class="btn">Únete Ahora</a>
+        <div class="menu-icon"><i class='bx bx-menu'></i></div>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h3>Construye tu mejor versión</h3>
+            <h1>NO HAY ATAJOS <br> SOLO <span>TRABAJO DURO</span></h1>
+            <p>Entrenamiento personalizado diseñado para romper tus límites físicos y mentales.</p>
+            <a href="#programas" class="btn btn-hero">Empezar hoy</a>
+        </div>
+    </section>
+
+    <section class="programas" id="programas">
+        <h2 class="heading">Nuestros <span>Programas</span></h2>
+        <div class="programas-grid container">
+            <div class="card">
+                <i class='bx bx-dumbbell'></i>
+                <h3>Musculación</h3>
+                <p>Hipertrofia basada en ciencia para ganar masa muscular real.</p>
+            </div>
+            <div class="card">
+                <i class='bx bx-run'></i>
+                <h3>Cardio HIIT</h3>
+                <p>Quema grasa máxima en sesiones de 30 minutos de alta intensidad.</p>
+            </div>
+            <div class="card">
+                <i class='bx bx-body'></i>
+                <h3>Cross Training</h3>
+                <p>Fuerza funcional y resistencia para atletas híbridos.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="bmi-section" id="bmi">
+        <div class="bmi-container container">
+            <div class="bmi-content">
+                <h2 class="heading">Calcula tu <span>IMC</span></h2>
+                <p>El Índice de Masa Corporal es un punto de partida para conocer tu estado actual.</p>
+                
+                <form id="bmi-form">
+                    <div class="input-group">
+                        <input type="number" id="weight" placeholder="Peso (kg)" required>
+                        <input type="number" id="height" placeholder="Altura (cm)" required>
+                    </div>
+                    <button type="submit" class="btn">Calcular Ahora</button>
+                </form>
+                
+                <div class="bmi-result" id="result-text">
+                    Tu resultado aparecerá aquí...
+                </div>
+            </div>
+            <div class="bmi-img">
+                <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Trainer">
+            </div>
+        </div>
+    </section>
+
+    <section class="transformaciones" id="transformaciones">
+        <h2 class="heading">Historias de <span>Éxito</span></h2>
+        <div class="transform-grid container">
+            <div class="t-card">
+                <div class="before-after">
+                    <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Atleta">
+                    <span class="badge">12 Semanas</span>
+                </div>
+                <h3>Carlos M.</h3>
+                <p>-15kg de grasa, +5kg de músculo.</p>
+            </div>
+            <div class="t-card">
+                <div class="before-after">
+                    <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Atleta">
+                    <span class="badge">6 Meses</span>
+                </div>
+                <h3>Laura D.</h3>
+                <p>Preparación para maratón completada.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="pricing" id="pricing">
+        <h2 class="heading">Elige tu <span>Plan</span></h2>
+        <div class="price-grid container">
+            <div class="price-card">
+                <h3>Básico</h3>
+                <div class="price">$29<span>/mes</span></div>
+                <ul>
+                    <li>Acceso al Gym</li>
+                    <li>Casilleros</li>
+                    <li>Duchas</li>
+                </ul>
+                <a href="#" class="btn outline">Elegir</a>
+            </div>
+            
+            <div class="price-card featured">
+                <div class="tag">Popular</div>
+                <h3>Pro</h3>
+                <div class="price">$49<span>/mes</span></div>
+                <ul>
+                    <li>Acceso Total 24/7</li>
+                    <li>1 Sesión con Entrenador</li>
+                    <li>Plan Nutricional App</li>
+                    <li>Clases Grupales</li>
+                </ul>
+                <a href="#" class="btn">Elegir</a>
+            </div>
+
+            <div class="price-card">
+                <h3>Elite</h3>
+                <div class="price">$89<span>/mes</span></div>
+                <ul>
+                    <li>Entrenador Personal</li>
+                    <li>Nutrición Semanal</li>
+                    <li>Acceso SPA</li>
+                    <li>Ropa Gratis</li>
+                </ul>
+                <a href="#" class="btn outline">Elegir</a>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <a href="#" class="logo">IRON<span>FORGED</span></a>
+                <p>Supera tus límites. El dolor es temporal, la gloria es eterna.</p>
+                <div class="socials">
+                    <i class='bx bxl-facebook'></i>
+                    <i class='bx bxl-instagram'></i>
+                    <i class='bx bxl-youtube'></i>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2025 IronForged Fitness.
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
