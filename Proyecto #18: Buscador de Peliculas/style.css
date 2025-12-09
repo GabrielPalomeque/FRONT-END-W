@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap');
+
+:root {
+    --primary-color: #e50914; /* Rojo Netflix */
+    --dark-bg: #141414;
+    --card-bg: #1f1f1f;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--dark-bg);
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.red {
+    color: var(--primary-color);
+}
+
+input {
+    background-color: #333;
+    border: 2px solid transparent;
+    border-radius: 50px;
+    color: white;
+    font-size: 1.2rem;
+    padding: 15px 30px;
+    width: 100%;
+    max-width: 600px;
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus {
+    background-color: #444;
+    border-color: var(--primary-color);
+}
+
+/* --- GRID MÁGICO --- */
+.movie-grid {
+    display: grid;
+    /* Esto crea columnas responsivas automáticamente */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 30px;
+}
+
+/* TARJETA DE PELÍCULA */
+.movie-card {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    position: relative;
+}
+
+.movie-card:hover {
+    transform: scale(1.05); /* Efecto zoom al pasar mouse */
+    z-index: 10;
+}
+
+.movie-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover; /* Asegura que la imagen llene el espacio */
+}
+
+.movie-info {
+    padding: 15px;
+}
+
+.movie-info h3 {
+    margin: 0;
+    font-size: 1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Pone "..." si el título es muy largo */
+}
+
+.movie-info span {
+    color: #aaa;
+    font-size: 0.9rem;
+}
+
+/* CLASE PARA CUANDO OCURRE UN ERROR */
+.empty-message {
+    grid-column: 1 / -1; /* Ocupa todo el ancho */
+    text-align: center;
+    font-size: 1.5rem;
+    color: #555;
+    margin-top: 50px;
+}
