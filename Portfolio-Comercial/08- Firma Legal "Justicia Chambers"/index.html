@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Justitia Chambers | Asesoría Legal Corporativa</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="top-bar">
+        <div class="container top-bar-inner">
+            <div class="contact-data">
+                <span><i class="ph ph-envelope-simple"></i> contacto@justitia.com</span>
+                <span><i class="ph ph-phone"></i> +34 912 345 678</span>
+            </div>
+            <div class="languages">
+                <span>ES</span> | <span>EN</span>
+            </div>
+        </div>
+    </div>
+
+    <header id="header">
+        <div class="container header-inner">
+            <a href="#" class="logo">JUSTITIA<span>.</span></a>
+            <nav class="nav-menu">
+                <a href="#home">Inicio</a>
+                <a href="#practice">Áreas de Práctica</a>
+                <a href="#attorneys">Equipo</a>
+                <a href="#results">Resultados</a>
+            </nav>
+            <a href="#consultation" class="btn-gold">Evaluación Gratuita</a>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <span class="eyebrow">Defendiendo tus intereses desde 1980</span>
+            <h1>Excelencia Legal <br> <em>Sin Compromisos</em></h1>
+            <p>Especialistas en derecho corporativo, fusiones y litigios de alto perfil. Protegemos su legado.</p>
+            <div class="hero-stats" id="counter-section">
+                <div class="stat">
+                    <h3 data-target="35">0</h3>
+                    <p>Años de Experiencia</p>
+                </div>
+                <div class="stat">
+                    <h3 data-target="98">0</h3>
+                    <p>% Casos Ganados</p>
+                </div>
+                <div class="stat">
+                    <h3 data-target="500">0</h3>
+                    <p>Millones Recuperados</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="practice" class="section practice">
+        <div class="container practice-layout">
+            <div class="practice-menu">
+                <h2>Nuestras Especialidades</h2>
+                <div class="tabs">
+                    <button class="tab-btn active" data-tab="corporate">Derecho Corporativo <i class="ph ph-caret-right"></i></button>
+                    <button class="tab-btn" data-tab="litigation">Litigios Civiles <i class="ph ph-caret-right"></i></button>
+                    <button class="tab-btn" data-tab="intellectual">Propiedad Intelectual <i class="ph ph-caret-right"></i></button>
+                    <button class="tab-btn" data-tab="realestate">Bienes Raíces <i class="ph ph-caret-right"></i></button>
+                </div>
+            </div>
+
+            <div class="practice-content">
+                <div class="tab-content active" id="corporate">
+                    <i class="ph ph-buildings content-icon"></i>
+                    <h3>Derecho Corporativo</h3>
+                    <p>Asesoramos a empresas Fortune 500 en fusiones, adquisiciones y reestructuraciones complejas. Minimizamos riesgos regulatorios y maximizamos el valor para los accionistas.</p>
+                    <ul>
+                        <li><i class="ph ph-check-circle"></i> Fusiones y Adquisiciones (M&A)</li>
+                        <li><i class="ph ph-check-circle"></i> Gobierno Corporativo</li>
+                        <li><i class="ph ph-check-circle"></i> Cumplimiento Normativo</li>
+                    </ul>
+                </div>
+                <div class="tab-content" id="litigation">
+                    <i class="ph ph-gavel content-icon"></i>
+                    <h3>Litigios Civiles</h3>
+                    <p>Representación agresiva en tribunales. Cuando la negociación falla, estamos preparados para defender sus derechos ante cualquier instancia judicial.</p>
+                    <ul>
+                        <li><i class="ph ph-check-circle"></i> Demandas Colectivas</li>
+                        <li><i class="ph ph-check-circle"></i> Arbitraje Internacional</li>
+                    </ul>
+                </div>
+                <div class="tab-content" id="intellectual">
+                    <i class="ph ph-lightbulb content-icon"></i>
+                    <h3>Propiedad Intelectual</h3>
+                    <p>Proteja sus ideas, marcas y patentes. En la era digital, la protección de sus activos intangibles es nuestra prioridad.</p>
+                </div>
+                <div class="tab-content" id="realestate">
+                    <i class="ph ph-house-line content-icon"></i>
+                    <h3>Derecho Inmobiliario</h3>
+                    <p>Gestión integral de activos inmobiliarios, zonificación y contratos de desarrollo urbano a gran escala.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="consultation" class="section consultation">
+        <div class="container">
+            <div class="wizard-wrapper">
+                <div class="wizard-header">
+                    <h2>Evaluación de Caso</h2>
+                    <p>Complete este formulario confidencial. Tardará menos de 1 minuto.</p>
+                    
+                    <div class="progress-container">
+                        <div class="progress-bar" id="progress-bar"></div>
+                    </div>
+                </div>
+
+                <form id="wizard-form">
+                    <div class="form-step active" data-step="1">
+                        <h3>1. ¿En qué área necesita ayuda?</h3>
+                        <div class="radio-group">
+                            <label class="radio-card">
+                                <input type="radio" name="area" value="corporativo" checked>
+                                <span class="card-content">
+                                    <i class="ph ph-briefcase"></i>
+                                    <span>Corporativo</span>
+                                </span>
+                            </label>
+                            <label class="radio-card">
+                                <input type="radio" name="area" value="civil">
+                                <span class="card-content">
+                                    <i class="ph ph-users"></i>
+                                    <span>Civil / Familiar</span>
+                                </span>
+                            </label>
+                            <label class="radio-card">
+                                <input type="radio" name="area" value="penal">
+                                <span class="card-content">
+                                    <i class="ph ph-scales"></i>
+                                    <span>Penal</span>
+                                </span>
+                            </label>
+                        </div>
+                        <div class="btn-group right">
+                            <button type="button" class="btn-next">Siguiente <i class="ph ph-arrow-right"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="form-step" data-step="2">
+                        <h3>2. Detalles del caso</h3>
+                        <div class="input-group">
+                            <label>Breve descripción del conflicto</label>
+                            <textarea rows="4" placeholder="Describa su situación aquí..."></textarea>
+                        </div>
+                        <div class="btn-group">
+                            <button type="button" class="btn-prev"><i class="ph ph-arrow-left"></i> Atrás</button>
+                            <button type="button" class="btn-next">Siguiente <i class="ph ph-arrow-right"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="form-step" data-step="3">
+                        <h3>3. Información de contacto</h3>
+                        <div class="input-row">
+                            <input type="text" placeholder="Nombre completo" required>
+                            <input type="email" placeholder="Correo electrónico" required>
+                        </div>
+                        <input type="tel" placeholder="Teléfono" required>
+                        <div class="btn-group">
+                            <button type="button" class="btn-prev"><i class="ph ph-arrow-left"></i> Atrás</button>
+                            <button type="submit" class="btn-submit">Enviar Solicitud</button>
+                        </div>
+                    </div>
+                    
+                    <div class="form-step" id="success-step">
+                        <div class="success-content">
+                            <i class="ph ph-check-circle"></i>
+                            <h3>Solicitud Recibida</h3>
+                            <p>Un asociado senior revisará su caso y le contactará en menos de 24 horas.</p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <a href="#" class="logo light">JUSTITIA<span>.</span></a>
+                <p>Confidencialidad, ética y resultados.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Oficinas</h4>
+                <p>Paseo de la Castellana 120, Madrid</p>
+                <p>5th Avenue 404, New York</p>
+            </div>
+            <div class="footer-col">
+                <h4>Legal</h4>
+                <a href="#">Aviso Legal</a>
+                <a href="#">Privacidad</a>
+            </div>
+        </div>
+        <div class="sub-footer">
+            &copy; 2025 Justitia Chambers LLP. Todos los derechos reservados.
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
