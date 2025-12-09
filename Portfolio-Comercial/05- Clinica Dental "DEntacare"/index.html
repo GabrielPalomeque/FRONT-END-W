@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dentacare | Sonrisas Perfectas</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="top-bar">
+        <div class="container top-flex">
+            <div class="contact-items">
+                <span><i class='bx bxs-phone'></i> +1 555 123 4567</span>
+                <span><i class='bx bxs-time'></i> Lun - Vie: 9:00 - 19:00</span>
+            </div>
+            <div class="social-links">
+                <a href="#"><i class='bx bxl-facebook'></i></a>
+                <a href="#"><i class='bx bxl-instagram'></i></a>
+            </div>
+        </div>
+    </div>
+
+    <header id="header">
+        <div class="container nav-flex">
+            <a href="#" class="logo">
+                <i class='bx bxs-capsule'></i> Denta<span>Care</span>
+            </a>
+            
+            <nav id="navbar">
+                <a href="#home" class="active">Inicio</a>
+                <a href="#services">Tratamientos</a>
+                <a href="#doctors">Doctores</a>
+                <a href="#faq">Preguntas</a>
+            </nav>
+
+            <a href="#appointment" class="btn-primary">Pedir Cita</a>
+            
+            <div class="menu-toggle" id="menu-toggle">
+                <i class='bx bx-menu'></i>
+            </div>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="container hero-flex">
+            <div class="hero-content">
+                <span class="badge">Tecnología Avanzada</span>
+                <h1>Cuidamos tu sonrisa con <br> <span>suavidad y precisión</span></h1>
+                <p>Clínica dental especializada en ortodoncia invisible, implantes y estética dental. Pierde el miedo al dentista con nuestros especialistas.</p>
+                <div class="hero-btns">
+                    <a href="#appointment" class="btn-primary">Reservar Visita</a>
+                    <a href="#services" class="btn-secondary">Ver Servicios</a>
+                </div>
+            </div>
+            <div class="hero-img">
+                <div class="circle-bg"></div>
+                <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Mujer sonriendo dentista">
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nuestros Tratamientos</h2>
+                <div class="line"></div>
+                <p>Soluciones integrales para toda la familia.</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="icon-box"><i class='bx bx-smile'></i></div>
+                    <h3>Blanqueamiento</h3>
+                    <p>Recupera el blanco natural de tus dientes en una sola sesión con tecnología láser.</p>
+                    <a href="#" class="read-more">Saber más <i class='bx bx-right-arrow-alt'></i></a>
+                </div>
+                <div class="service-card">
+                    <div class="icon-box"><i class='bx bx-plus-medical'></i></div>
+                    <h3>Ortodoncia</h3>
+                    <p>Brackets estéticos y alineadores invisibles (Invisalign) para corregir tu mordida.</p>
+                    <a href="#" class="read-more">Saber más <i class='bx bx-right-arrow-alt'></i></a>
+                </div>
+                <div class="service-card">
+                    <div class="icon-box"><i class='bx bxs-invader'></i></div> <h3>Implantes</h3>
+                    <p>Reemplazo de piezas dentales con materiales de titanio de máxima biocompatibilidad.</p>
+                    <a href="#" class="read-more">Saber más <i class='bx bx-right-arrow-alt'></i></a>
+                </div>
+                <div class="service-card">
+                    <div class="icon-box"><i class='bx bxs-baby-carriage'></i></div>
+                    <h3>Odontopediatría</h3>
+                    <p>Cuidado especial y divertido para los más pequeños de la casa.</p>
+                    <a href="#" class="read-more">Saber más <i class='bx bx-right-arrow-alt'></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="appointment" class="appointment-section">
+        <div class="container appointment-flex">
+            <div class="form-wrapper">
+                <h3>Agenda tu Cita</h3>
+                <p>Déjanos tus datos y te confirmaremos la hora por WhatsApp.</p>
+                
+                <form id="booking-form">
+                    <div class="input-group">
+                        <input type="text" placeholder="Nombre Completo" required>
+                        <input type="tel" placeholder="Teléfono" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="email" placeholder="Correo Electrónico" required>
+                        <select required>
+                            <option value="" disabled selected>Tipo de Tratamiento</option>
+                            <option>Revisión General</option>
+                            <option>Blanqueamiento</option>
+                            <option>Dolor / Urgencia</option>
+                            <option>Ortodoncia</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <input type="date" required>
+                        <input type="time" required>
+                    </div>
+                    <button type="submit" class="btn-submit">Confirmar Cita</button>
+                    <div class="success-message" id="success-msg">
+                        <i class='bx bxs-check-circle'></i> ¡Solicitud enviada! Te contactaremos pronto.
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Preguntas Frecuentes</h2>
+                <div class="line"></div>
+            </div>
+
+            <div class="accordion">
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h4>¿Aceptan seguros médicos?</h4>
+                        <i class='bx bx-chevron-down'></i>
+                    </div>
+                    <div class="accordion-body">
+                        <p>Sí, trabajamos con la mayoría de aseguradoras nacionales e internacionales. Contáctanos para verificar tu cobertura.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h4>¿El blanqueamiento duele?</h4>
+                        <i class='bx bx-chevron-down'></i>
+                    </div>
+                    <div class="accordion-body">
+                        <p>No, utilizamos geles protectores para las encías. Puede haber una ligera sensibilidad las primeras 24 horas, pero es temporal.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h4>¿Atienden urgencias los fines de semana?</h4>
+                        <i class='bx bx-chevron-down'></i>
+                    </div>
+                    <div class="accordion-body">
+                        <p>Sí, tenemos un dentista de guardia los sábados de 9:00 a 14:00 para emergencias agudas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Dentacare Clínica. Tu salud es primero.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
