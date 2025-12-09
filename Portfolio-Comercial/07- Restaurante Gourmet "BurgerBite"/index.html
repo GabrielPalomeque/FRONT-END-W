@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BurgerBite | Gourmet Experience</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header id="header">
+        <nav class="container nav">
+            <a href="#" class="logo">BURGER<span>BITE</span>.</a>
+            
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-link active">Inicio</a></li>
+                    <li><a href="#menu" class="nav-link">Menú</a></li>
+                    <li><a href="#delivery" class="nav-link">Delivery</a></li>
+                </ul>
+            </div>
+
+            <div class="nav-buttons">
+                <button class="theme-toggle" id="theme-toggle">
+                    <i class="ri-moon-line"></i>
+                </button>
+                <a href="#" class="btn-order">Pedir Ahora</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="container hero-container">
+                <div class="hero-data">
+                    <span class="hero-subtitle">Desde 2015</span>
+                    <h1 class="hero-title">MORDIDA <br> <span class="outline">LEGENDARIA</span></h1>
+                    <p class="hero-description">
+                        Carne 100% Angus, pan brioche horneado a diario y nuestra salsa secreta. No es comida rápida, es una experiencia.
+                    </p>
+                    <div class="hero-btns">
+                        <button class="btn">Ver Menú Completo</button>
+                        <button class="btn-video"><i class="ri-play-fill"></i> Ver Video</button>
+                    </div>
+                </div>
+
+                <div class="hero-img-wrapper" id="hero-tilt">
+                    <div class="circle-bg"></div>
+                    <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Burger" class="hero-img">
+                    
+                    <div class="floating-badge">
+                        <span>🔥</span>
+                        <p>Spicy</p>
+                    </div>
+                    <div class="floating-price">
+                        $12.99
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="marquee">
+            <div class="track">
+                <div class="content">
+                    &nbsp;FRESH MEAT ✦ JUICY BURGERS ✦ TASTY FRIES ✦ COLD DRINKS ✦ FRESH MEAT ✦ JUICY BURGERS ✦ TASTY FRIES ✦ COLD DRINKS
+                </div>
+            </div>
+        </div>
+
+        <section class="section menu" id="menu">
+            <div class="container">
+                <div class="section-header">
+                    <h2>TOP SELLERS</h2>
+                    <div class="arrows">
+                        <i class="ri-arrow-left-line" id="scroll-left"></i>
+                        <i class="ri-arrow-right-line" id="scroll-right"></i>
+                    </div>
+                </div>
+
+                <div class="menu-scroller" id="menu-scroller">
+                    
+                    <article class="menu-card">
+                        <div class="menu-img">
+                            <img src="https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Burger">
+                        </div>
+                        <div class="menu-content">
+                            <h3>Classic Smash</h3>
+                            <p>Doble carne, cheddar, cebolla.</p>
+                            <div class="menu-footer">
+                                <span class="price">$9.00</span>
+                                <button class="btn-add"><i class="ri-add-line"></i></button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="menu-card">
+                        <div class="menu-img">
+                            <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Burger">
+                        </div>
+                        <div class="menu-content">
+                            <h3>Bacon King</h3>
+                            <p>Tocino crujiente, BBQ, aros.</p>
+                            <div class="menu-footer">
+                                <span class="price">$11.50</span>
+                                <button class="btn-add"><i class="ri-add-line"></i></button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="menu-card">
+                        <div class="menu-img">
+                            <img src="https://images.unsplash.com/photo-1551782450-a2132b4ba21d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Burger">
+                        </div>
+                        <div class="menu-content">
+                            <h3>Veggie Power</h3>
+                            <p>Lentejas, aguacate, tomate.</p>
+                            <div class="menu-footer">
+                                <span class="price">$10.00</span>
+                                <button class="btn-add"><i class="ri-add-line"></i></button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="menu-card">
+                        <div class="menu-img">
+                            <img src="https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Burger">
+                        </div>
+                        <div class="menu-content">
+                            <h3>Chicken Crispy</h3>
+                            <p>Pollo frito, mayo picante.</p>
+                            <div class="menu-footer">
+                                <span class="price">$9.50</span>
+                                <button class="btn-add"><i class="ri-add-line"></i></button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="app section" id="delivery">
+            <div class="container app-container">
+                <div class="app-data">
+                    <h2>Pide desde <br> tu sofá</h2>
+                    <p>Descarga nuestra app y obtén 20% OFF en tu primer pedido. Rastreo en tiempo real.</p>
+                    <div class="app-buttons">
+                        <button class="store-btn"><i class="ri-apple-fill"></i> App Store</button>
+                        <button class="store-btn"><i class="ri-google-play-fill"></i> Google Play</button>
+                    </div>
+                </div>
+                <div class="app-img">
+                    <img src="https://images.unsplash.com/photo-1526234362653-3b75a0c07438?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Mobile App">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 BurgerBite Inc. Eat Good.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
