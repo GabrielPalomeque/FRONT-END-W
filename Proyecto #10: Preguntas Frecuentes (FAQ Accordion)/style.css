@@ -1,0 +1,90 @@
+body {
+    background: #f1f5f8;
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.section-center {
+    width: 90vw;
+    max-width: 600px; /* Ancho máximo del acordeón */
+    margin: 0 auto;
+}
+
+.question {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem 1.5rem 0 1.5rem;
+    margin-bottom: 2rem; /* Espacio entre preguntas */
+    border: 2px solid transparent;
+    transition: 0.3s;
+}
+
+.question-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    padding-bottom: 1rem;
+}
+
+.question-title p {
+    margin: 0;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #102a42;
+}
+
+.question-btn {
+    font-size: 1.5rem;
+    background: transparent;
+    border-color: transparent;
+    cursor: pointer;
+    color: #c59d5f; /* Color dorado */
+    transition: 0.3s;
+}
+
+.question-btn:hover {
+    transform: rotate(90deg); /* Efecto al pasar mouse */
+}
+
+/* --- LÓGICA DE OCULTAR / MOSTRAR --- */
+
+.question-text {
+    display: none; /* Oculto por defecto */
+    padding-bottom: 1rem;
+    color: #617d98;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    padding-top: 1rem;
+}
+
+/* Cuando JS agregue esta clase, mostramos el texto */
+.show-text .question-text {
+    display: block;
+}
+
+/* Control de iconos */
+.minus-icon {
+    display: none; /* Por defecto no mostramos el menos */
+}
+
+.show-text .minus-icon {
+    display: inline; /* Si está abierto, mostramos el menos */
+}
+
+.show-text .plus-icon {
+    display: none; /* Si está abierto, ocultamos el más */
+}
+
+.show-text {
+    border: 2px solid #c59d5f; /* Borde dorado cuando está activo */
+}
