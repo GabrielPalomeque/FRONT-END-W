@@ -1,0 +1,138 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f4f7f6;
+    min-height: 100vh;
+    display: flex; /* Centra todo el bloque en la pantalla */
+    align-items: center;
+    justify-content: center;
+    padding: 20px; /* Para que no pegue a los bordes en móviles */
+}
+
+/* --- CONTENEDOR FLEX --- */
+.pricing-container {
+    display: flex;
+    gap: 20px; /* Espacio entre las tarjetas */
+    flex-wrap: wrap; /* Importante: permite que bajen si no caben (móviles) */
+    justify-content: center;
+    align-items: center; /* Alinea verticalmente al centro */
+}
+
+/* --- TARJETA BASE --- */
+.card {
+    background: white;
+    padding: 40px;
+    width: 300px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+.card:hover {
+    transform: translateY(-10px); /* Efecto de flotar al pasar el mouse */
+}
+
+/* --- TARJETA DESTACADA (POPULAR) --- */
+.popular {
+    border-top: 5px solid #6c5ce7; /* Línea de color arriba */
+    transform: scale(1.1); /* Hacemos esta tarjeta un 10% más grande */
+    z-index: 1; /* Asegura que esté por encima de las otras */
+    box-shadow: 0 15px 30px rgba(108, 92, 231, 0.2);
+}
+
+.popular:hover {
+    transform: scale(1.1) translateY(-10px); /* Mantiene el tamaño grande + efecto flotar */
+}
+
+/* Badge de "Recomendado" */
+.badge {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #6c5ce7;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* Tipografía y detalles */
+h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.price {
+    font-size: 48px;
+    font-weight: bold;
+    color: #2d3436;
+    margin-bottom: 20px;
+}
+
+.price span {
+    font-size: 16px;
+    color: #b2bec3;
+    font-weight: normal;
+}
+
+ul {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+ul li {
+    margin: 15px 0;
+    color: #636e72;
+}
+
+/* Botones */
+.btn {
+    padding: 12px 25px;
+    border: 2px solid #6c5ce7;
+    background: transparent;
+    color: #6c5ce7;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #6c5ce7;
+    color: white;
+}
+
+.btn-filled {
+    background: #6c5ce7;
+    color: white;
+}
+
+.btn-filled:hover {
+    background: #5649c0;
+}
+
+/* --- RESPONSIVE (Móviles) --- */
+@media (max-width: 900px) {
+    .pricing-container {
+        flex-direction: column; /* Pone las tarjetas una debajo de otra */
+    }
+    
+    .popular {
+        transform: scale(1); /* En móvil quitamos el efecto gigante para que no se vea raro */
+    }
+    
+    .popular:hover {
+        transform: translateY(-5px);
+    }
+}
