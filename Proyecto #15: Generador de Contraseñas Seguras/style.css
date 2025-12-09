@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #3b3b98;
+    color: #fff;
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #23235b;
+    box-shadow: 0px 2px 10px rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    width: 350px;
+    border-radius: 10px;
+}
+
+h2 {
+    margin: 10px 0 20px;
+    text-align: center;
+}
+
+.result-container {
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 10px;
+    height: 50px;
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    position: relative;
+    font-family: 'Courier Prime', monospace; /* Fuente tipo máquina de escribir */
+}
+
+#result {
+    word-wrap: break-word; /* Si es muy larga, que baje */
+    max-width: calc(100% - 40px);
+    font-size: 18px;
+}
+
+.btn {
+    border: none;
+    background-color: #3b3b98;
+    color: #fff;
+    font-size: 16px;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.btn-large {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    font-weight: bold;
+    background-color: #e55039; /* Color rojo llamativo */
+}
+
+.btn-large:hover {
+    background-color: #eb4d4b;
+}
+
+.setting {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 0;
+}
