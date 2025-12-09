@@ -1,0 +1,111 @@
+/* Reset básico para quitar márgenes por defecto */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Centramos la tarjeta en toda la pantalla usando Flexbox */
+body {
+    background-color: #e0e5ec; /* Color de fondo gris suave */
+    display: flex;
+    justify-content: center; /* Centrado Horizontal */
+    align-items: center;     /* Centrado Vertical */
+    min-height: 100vh;       /* Altura mínima del 100% de la ventana */
+}
+
+/* Diseño de la tarjeta */
+.card-container {
+    background-color: #ffffff;
+    width: 320px;
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1); /* Sombra suave para efecto 3D */
+    overflow: hidden; /* Para que la imagen no se salga de los bordes redondeados */
+    text-align: center;
+    padding-bottom: 20px;
+    transition: transform 0.3s ease; /* Animación suave al pasar el mouse */
+}
+
+/* Efecto hover: la tarjeta sube un poco */
+.card-container:hover {
+    transform: translateY(-5px);
+}
+
+.card-header {
+    background: linear-gradient(135deg, #0D8ABC, #6dd5ed); /* Degradado azul */
+    height: 100px;
+    margin-bottom: 50px; /* Espacio para que quepa la foto */
+    position: relative;
+}
+
+.profile-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; /* Hace la imagen redonda */
+    border: 4px solid white; /* Borde blanco alrededor de la foto */
+    position: absolute;
+    bottom: -50px; /* Empuja la foto hacia abajo para que quede mitad dentro/mitad fuera */
+    left: 50%;
+    transform: translateX(-50%); /* Centra la foto exactamente */
+}
+
+.card-body {
+    padding: 0 20px;
+}
+
+.name {
+    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.title {
+    color: #0D8ABC;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.description {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* Estilos de botones */
+.card-footer {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 20px;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.primary {
+    background-color: #0D8ABC;
+    color: white;
+}
+
+.primary:hover {
+    background-color: #086a91;
+}
+
+.secondary {
+    background-color: transparent;
+    border: 2px solid #0D8ABC;
+    color: #0D8ABC;
+}
+
+.secondary:hover {
+    background-color: #0D8ABC;
+    color: white;
+}
