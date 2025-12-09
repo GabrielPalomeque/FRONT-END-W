@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kingsman Cuts | Premium Barber</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Rye&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="loader-wrapper">
+        <div class="loader-text">KINGSMAN</div>
+        <div class="loader-bar"><div class="progress"></div></div>
+    </div>
+
+    <div class="cursor"></div>
+    <div class="cursor2"></div>
+
+    <aside class="sidebar">
+        <a href="#" class="logo">K<span>C</span></a>
+        
+        <nav class="nav-links">
+            <a href="#home" class="active"><span>01.</span> Home</a>
+            <a href="#services"><span>02.</span> Cortes</a>
+            <a href="#booking"><span>03.</span> Reserva</a>
+            <a href="#location"><span>04.</span> Ubicación</a>
+        </nav>
+
+        <div class="socials">
+            <a href="#">IG</a>
+            <a href="#">FB</a>
+        </div>
+    </aside>
+
+    <div class="menu-toggle">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+
+    <main class="main-content">
+        
+        <section id="home" class="hero">
+            <div class="hero-text">
+                <p class="subtitle">Estilo Clásico & Navaja Afilada</p>
+                <h1>CABALLEROS <br> <span class="outline-text">DISTINGUIDOS</span></h1>
+                <p class="description">No es solo un corte de pelo. Es el ritual que separa a los hombres de los niños.</p>
+                <a href="#booking" class="btn-vintage">Reservar Turno</a>
+            </div>
+            <div class="hero-img-box">
+                <img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Barber">
+            </div>
+        </section>
+
+        <section id="services" class="services">
+            <div class="section-header">
+                <h2>Nuestros Servicios</h2>
+                <div class="line"></div>
+            </div>
+            
+            <div class="service-list">
+                <div class="service-item">
+                    <div class="price">$25</div>
+                    <h3>Corte Clásico</h3>
+                    <p>Tijera y máquina, lavado incluido.</p>
+                </div>
+                <div class="service-item active">
+                    <div class="price">$35</div>
+                    <h3>Ritual de Barba</h3>
+                    <p>Toalla caliente, navaja libre y aceites.</p>
+                </div>
+                <div class="service-item">
+                    <div class="price">$50</div>
+                    <h3>The Kingsman</h3>
+                    <p>Corte + Barba + Masaje facial + Bebida.</p>
+                </div>
+                <div class="service-item">
+                    <div class="price">$20</div>
+                    <h3>Perfilado</h3>
+                    <p>Alineación de contornos y cejas.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="booking" class="booking">
+            <div class="booking-wrapper">
+                <div class="booking-info">
+                    <h2>Agenda tu silla</h2>
+                    <p>Selecciona tu barbero preferido y el horario.</p>
+                </div>
+                
+                <form class="booking-form" id="bookingForm">
+                    <label>Elige tu Barbero:</label>
+                    <div class="barber-select">
+                        <div class="barber-option" data-value="mike">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Mike">
+                            <span>Mike</span>
+                        </div>
+                        <div class="barber-option" data-value="danny">
+                            <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Danny">
+                            <span>Danny</span>
+                        </div>
+                        <div class="barber-option" data-value="tom">
+                            <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="Tom">
+                            <span>Tom</span>
+                        </div>
+                        <input type="hidden" id="selectedBarber" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="input-data">
+                            <input type="date" required>
+                        </div>
+                        <div class="input-data">
+                            <select required>
+                                <option value="" disabled selected>Horario</option>
+                                <option>10:00 AM</option>
+                                <option>11:00 AM</option>
+                                <option>03:00 PM</option>
+                                <option>05:00 PM</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-vintage full-width">Confirmar Reserva</button>
+                </form>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 Kingsman Cuts. Estilo y Honor.</p>
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
